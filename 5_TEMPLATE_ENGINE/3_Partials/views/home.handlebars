@@ -1,0 +1,6 @@
+<h1>Welcome, {{user.name}}!</h1>
+{{#if auth}}
+    <p>You are logged in. Please <a href="/dashboard">click here</a> to access your dashboard.</p>
+{{else}}
+    <p>You are not logged in.</p>
+{{/if}}

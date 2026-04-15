@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .feedback-card {
+            width: 100%;
+            max-width: 500px;
+        }
+    </style>
+  </head>
+  <body class="d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow-sm border-0 feedback-card">
+        <div class="card-body p-5">
+            <h2 class="text-center mb-4 fw-light">Send your feedback</h2>
+            <form action="/feedbackpage/save" method="POST">
+                <div class="mb-3">
+                    <label for="fullnameinput" class="form-label text-secondary small">Full Name</label>
+                    <input name="name" type="text" class="form-control form-control-lg" id="fullnameinput" placeholder="John Doe" required>
+                </div>
+                <div class="mb-4">
+                    <label for="feedbackinput" class="form-label text-secondary small">Your Message</label>
+                    <textarea name="message" class="form-control form-control-lg" id="feedbackinput" placeholder="How can we improve?" rows="4" required></textarea>
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-lg shadow-sm">Submit Feedback</button>
+                </div>
+            </form>
+            <div class="text-center mt-3">
+                <a href="/" class="text-decoration-none small text-muted">← Go back</a>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
